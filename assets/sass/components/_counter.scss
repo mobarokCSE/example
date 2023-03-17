@@ -6,12 +6,18 @@
 
 
                 &-inner {
-                    @extend %py-65,
+                    @extend %py-40,
                     %text-center;
+                    @include breakpoint (sm){
+                        padding-block: 65px;
+                    }
                 }
 
                 &-thumb {
-                    @extend %mb-30;
+                    @extend %mb-20;
+                    @include breakpoint (sm){
+                        margin-block-end: 30px;
+                    }
                 }
 
                 &-content {
@@ -29,28 +35,32 @@
             }
         }
 
-        .col-md-3 {
+        .col-lg-3 {
             &:not(:last-child) {
                 .counter__item {
-                    @extend %p-rel;
+                    @include breakpoint (lg){
+                    position: relative;
 
                     &::before {
-                        @extend %p-abs;
+                        position: absolute;
                         content: "";
-                        height: 2px;
-                        width: 100px;
-                        bottom: 0;
-                        left: 39%;
+                        width: 2px;
+                        height: 101px;
+                        left: auto;
+                        right: 0;
+                        top: 30%;
                         background-color: $brand2-bg-1;
 
-                        @include breakpoint(md) {
-                            width: 2px;
-                            height: 101px;
-                            left: auto;
-                            right: 0;
-                            top: 30%;
-                        }
+                        // @include breakpoint(md) {
+                        //     width: 2px;
+                        //     height: 101px;
+                        //     left: auto;
+                        //     right: 0;
+                        //     top: 30%;
+                        // } 
                     }
+                    }
+
                 }
             }
         }

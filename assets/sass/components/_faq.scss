@@ -3,36 +3,55 @@
     @extend %of-hidden;
     border-radius: .5rem;
 
-    //style 2
-    &--style2 {
-      .accordion {
-
-        &__button,
-        &__body {
-          background-color: rgba($secondary-color, $alpha: .05);
-          backdrop-filter: blur(15px);
-          -webkit-backdrop-filter: blur(15px);
-        }
-      }
+    &__button,
+    &__body {
+      background-color: rgba($white-color, $alpha: .09);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
     }
   }
+
 
   &__button {
     @extend %w-100;
     @extend %text-left;
-    @extend %flex;
-    @extend %justify-between;
-    @include font-size(20px);
+    @extend %d-flex;
+    @extend %justify-between,
+    %p-25;
     background-color: $white-color;
-    color: $brand-color;
-    font-family: $title-font;
-    font-weight: 600;
-    padding: 1.5rem 1rem;
     border: none;
+    box-shadow: 4px 8px 20px 0px #3E8DC814;
+    
+
+
+    .lesson-name {
+      @extend %text-regular;
+      @include font-size(20px);
+      color: $brand-color-1;
+      font-family: $title-font;
+    }
+
+    .lesson {
+      @extend %d-flex,
+      %align-i-center;
+
+      .lesson-number {
+        @extend %me-20,
+        %d-none;
+        color: $text-color;
+
+        @include breakpoint(sm) {
+          display: block;
+        }
+
+      }
+    }
+
 
     .plus-icon {
       @extend %p-rel;
       @include box(14px);
+      // max-width: 140px;
       display: none;
 
       @include breakpoint(sm) {
@@ -42,7 +61,8 @@
       &:before,
       &:after {
         @extend %p-abs;
-        background-color: $brand-color;
+        content: "";
+        background-color: $text-color;
       }
 
       &::before {
@@ -55,12 +75,12 @@
     }
 
     &.collapsed {
-      color: $title-color;
+      color: $text-color;
 
 
       .plus-icon {
         &::before {
-          background-color: $title-color;
+          background-color: $text-color;
         }
 
         &::after {
@@ -69,14 +89,40 @@
           width: 2px;
           top: 50%;
           left: 6px;
-          background-color: $title-color;
+          background-color: $text-color;
         }
       }
     }
   }
 
   &__body {
-    padding: .5rem 1.5rem 1.5rem;
+    @extend %p-30;
     background-color: $white-color;
+    border: 1px solid rgba(95, 164, 218, 0.4);
+    border-top: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    .overview-list {
+      li {
+        @extend %d-block;
+        gap: 10px;
+        color: $text-color;
+
+        &:not(:last-child) {
+          @extend %mb-20;
+        }
+
+        svg {
+          @extend %me-5;
+        }
+        a{
+          transition: $transition;
+          &:hover{
+            color: $brand1-text-1;
+          }
+        }
+      }
+    }
   }
 }

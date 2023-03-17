@@ -63,7 +63,12 @@
 %place-i-center {
   place-items: center;
 }
-
+%text-capitalize{
+  text-transform: capitalize;
+}
+%border-none{
+  border: none;
+}
 
 /*=========<<Flex property extends end>>=========*/
 
@@ -326,7 +331,7 @@ $val in $space-stops {
   }
 
   %pe-#{$key} {
-    padding-inline-start: #{$val};
+    padding-inline-end: #{$val};
   }
 
   %py-#{$key} {

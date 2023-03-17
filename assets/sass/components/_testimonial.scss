@@ -1,10 +1,12 @@
 .testimonial {
+  @extend %of-hidden;
 
   &--style1 {
     .testimonial {
       &__item {
         @extend %text-center;
         color: $white-color;
+        background-color: $brand-color-1;
 
         &-content {
           span {
@@ -18,10 +20,15 @@
           blockquote {
             p {
               @extend %text-regular;
-              @include font-size(36px);
-              color: $white-color;
+              @include font-size(32px);
+              color: $brand1-text-special;
               max-inline-size: 53ch;
               margin: 0 auto;
+
+              @include breakpoint(max-lg) {
+                @include font-size(24px)
+              }
+
             }
           }
 
@@ -46,6 +53,7 @@
       }
 
       &__author {
+        @extend %p-5;
         max-width: 90%;
 
         @include breakpoint(sm) {
@@ -65,37 +73,39 @@
         }
 
         &-thumb {
+          @include add-prefix(transition, $transition);
+          aspect-ratio: 1/1;
+          border: 1px solid transparent;
+          border-radius: 50%;
+          cursor: pointer;
+          display: grid;
+          place-items: center;
+          // padding: 5px;
+
           img {
-            border: 1px solid transparent;
-            border-radius: 65px;
-            padding: 5px;
-            max-width: 60px;
-            cursor: pointer;
-
-            @include breakpoint(sm) {
-              max-width: 70px;
-            }
-
-            @include breakpoint(md) {
-              max-width: 80px;
-            }
-
-            @include breakpoint(lg) {
-              max-width: 90px;
-            }
-
-            @include breakpoint(xl) {
-              max-width: 100px;
-            }
+            max-inline-size: 85%;
           }
         }
 
         .swiper-slide {
           &-thumb-active {
-            img {
+            .testimonial__author-thumb {
               border: 1px solid $secondary-color-1;
-              border-radius: 65px;
-              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    &.brand-4 {
+      .testimonial__item {
+        background-color: $brand-color-4;
+
+        &-content {
+          blockquote {
+            p {
+
+              color: $white-color;
             }
           }
         }
@@ -105,6 +115,11 @@
 
   &--style2 {
     .testimonial {
+      @extend %of-hidden;
+
+      // // background: rgba($brand2-bg-1, $alpha:.5);
+      // // background-color: rgba($brand2-bg-1, $alpha:0.5);
+      // background-color: $brand2-bg-1;
       &__wrapper {
         @extend %p-rel;
       }
@@ -135,6 +150,19 @@
         %align-i-center,
         %justify-between,
         %mt-40;
+
+        @include breakpoint(max-sm) {
+          display: block;
+        }
+
+        @include breakpoint(sm) {
+          display: block;
+        }
+
+        @include breakpoint(lg) {
+          display: flex;
+        }
+
       }
 
       &__author {
@@ -154,6 +182,7 @@
             @extend %mb-5;
             font-weight: 600;
 
+
           }
 
           span {
@@ -166,10 +195,27 @@
       &__rating {
         span {
           svg {
-            font-size: 18px;
+            @include font-size(16px);
             color: $tertiary-color-2;
           }
         }
+
+        @include breakpoint(max-sm) {
+          font-size: 14px;
+          margin-block-start: 5px;
+          margin-inline-start: 76px;
+        }
+
+        @include breakpoint(sm) {
+          margin-block-start: 5px;
+          margin-inline-start: 76px;
+        }
+
+        @include breakpoint(lg) {
+          margin-block-start: 0px;
+          margin-inline-start: 0px;
+        }
+
       }
 
       &__shape {
@@ -300,7 +346,7 @@
               transition: $transition;
               width: 60px;
 
-              @include breakpoint(sm){
+              @include breakpoint(sm) {
                 width: auto;
               }
             }
@@ -329,7 +375,7 @@
           h6 {
             @extend %text-semibold;
           }
- 
+
           p {
             color: $text-color-light;
           }

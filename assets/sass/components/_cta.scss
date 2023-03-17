@@ -1,5 +1,5 @@
 .cta {
-  %__wrapper{
+  %__wrapper {
     border-radius: 15px;
   }
 
@@ -8,7 +8,8 @@
       .subtitle {
         @extend %d-flex,
         %align-i-center,
-        %justify-center, %pt-75;
+        %justify-center,
+        %pt-75;
         gap: 10px;
 
         p {
@@ -33,9 +34,9 @@
 
 
         @include breakpoint(sm) {
-          @include breakpoint (max-sm){
+          @include breakpoint (max-sm) {
             max-width: 600px;
-          }          
+          }
         }
 
         .input-group {
@@ -52,21 +53,21 @@
 
           ::placeholder {
             color: #fff;
-            opacity: 1; 
+            opacity: 1;
           }
         }
 
         .cta-btn {
-          padding: 16px 30px;
+          padding: 19.5px;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-          background: $brand-color-4;
-          border-color: $brand-color-4;
+          background: $brand-color-2;
+          border-color: $brand-color-2;
           // margin-left: -25px;
           @include font-size(16px);
 
           @include breakpoint(sm) {
-            padding: 16px 30px;
+            padding: 19.5px 30px; 
           }
         }
       }
@@ -75,11 +76,16 @@
 
   .form-control {
     max-inline-size: 300px;
-    padding: 1rem;
+    // padding: 1rem;
     border-radius: 99px;
-
+ 
     &:focus {
       box-shadow: none;
+    }
+
+    &:placeholder {
+      color: #fff;
+      opacity: 1;
     }
   }
 }

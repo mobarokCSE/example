@@ -11,7 +11,7 @@
             // }
         }
 
-        &-playbtn {
+        &-playbtn { 
             @extend %p-abs,
             %pos-center;
             width: 60px;
@@ -60,6 +60,6 @@
             }
 
         }
-
+ 
     }
 }

@@ -39,11 +39,33 @@
                         position: absolute;
                         content: "";
                         left: 50%;
-                        bottom: -25%;
+                        bottom: -17%;
                         width: 100%;
                         background-color: rgba($color: $title-color, $alpha: .40);
                         border-bottom-left-radius: 17px;
                         border-bottom-right-radius: 17px;
+
+                        @include breakpoint(sm) {
+                            bottom: -25%;
+                        }
+
+                        @include breakpoint(md) {
+                            bottom: -18%;
+                        }
+
+                        @include breakpoint(lg) {
+                            bottom: -13%;
+                        }
+
+                        @include breakpoint(xl) {
+                            bottom: -23%;
+                        }
+
+                        @include breakpoint(xxl) {
+                            bottom: -20%;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
                     }
                 }
 
@@ -80,22 +102,54 @@
 
             }
 
-            &__wrapper {
-                .section-header {
+            // &__wrapper {
+            //     .section-header {
 
-                    // margin-block-end: 0;
-                    p {
-                        @include font-size(16px);
-                    }
+            //         // margin-block-end: 0;
+            //         p {
+            //             @include font-size(16px);
+            //         }
 
-                    @include breakpoint(max-md) {
+            //         @include breakpoint(max-md) {
+            //             margin-block-end: 20px;
+            //         }
+
+            //         @include breakpoint(max-xl) {
+            //             margin-block-end: 20px;
+            //         }
+            //     }
+            // }
+            &__header {
+                @extend %pe-20;
+
+                @include breakpoint(lg) {
+                    padding-inline-end: 0;
+                }
+
+                @include breakpoint(xl) {
+                    padding-inline-end: 20px;
+                }
+
+                h2 {
+                    @extend %mb-20;
+                }
+
+                p {
+                    @extend %mb-40,
+                    %text-medium;
+                    @include font-size(16px);
+                    color: $text-color;
+
+                    @include breakpoint(lg) {
                         margin-block-end: 20px;
                     }
 
-                    @include breakpoint(max-xl) {
-                        margin-block-end: 20px;
+                    @include breakpoint(xl) {
+                        font-size: 18px;
+                        margin-block-end: 40px;
                     }
                 }
+
             }
         }
     }
@@ -182,12 +236,13 @@
                 >span {
                     @extend %text-semibold;
                     color: $secondary-color-4;
+
                     svg {
                         color: $secondary-color-4;
                     }
-                }
+                } 
 
-                .info{
+                .info {
                     @extend %mt-25;
                 }
             }

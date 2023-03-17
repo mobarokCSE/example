@@ -31,6 +31,12 @@ h6 {
   }
 }
 
+h4,
+h5,
+h6{
+  font-weight: 600;
+}
+
 h1 {
   @include font-size($fs-h1);
 }

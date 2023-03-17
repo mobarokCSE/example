@@ -16,7 +16,7 @@
     @extend %p-abs;
     content: "";
     width: 100%;
-  } 
+  }
 
   &.header-fixed {
     @extend %w-100;
@@ -24,12 +24,27 @@
     position: fixed;
     top: 0;
     left: 0;
-    // border-bottom: 1px solid $brand-color-1;
+    // border-bottom: 1px solid $secondary-color-1;
     box-shadow: 0px 5px 10px -5px rgba($black-color, $alpha: 0.3);
     z-index: 999;
-    background: rgba($white-color, $alpha: 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+
+    background-color: $brand-color-1;
+
+    &.header-section {
+
+      &.home2,
+      &.home3 {
+        background-color: $white-color;
+      }
+
+      &.home4 {
+        background-color: $brand-color-4;
+      }
+    }
+
+    // background: rgba($white-color, $alpha: 0.1);
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
   }
 }
 
@@ -44,11 +59,7 @@
   }
 
   @include breakpoint(md) {
-    padding-block: 25px;
-  }
-
-  @include breakpoint(xl) {
-    padding-block: 30px;
+    padding-block: 20px;
   }
 
   .header-start {
@@ -75,6 +86,10 @@
       }
 
       @include breakpoint(xl) {
+        gap: 30px;
+      }
+
+      @include breakpoint(xxl) {
         gap: 80px;
       }
     }
@@ -163,7 +178,7 @@
     }
   }
 
-  @include breakpoint(lg) {
+  @include breakpoint(xl) {
     li {
       position: relative;
 
@@ -245,7 +260,7 @@
     }
   }
 
-  @include breakpoint(max-lg) {
+  @include breakpoint(max-xl) {
     width: 100%;
     position: absolute;
     top: 100%;
@@ -314,6 +329,11 @@
   height: 20px;
   @extend %ms-30;
 
+  @include breakpoint (md) {
+    width: 35px;
+    height: 25px;
+  }
+
   span {
     @extend %p-abs;
     @extend %d-inline-block;
@@ -321,6 +341,10 @@
     height: 3px;
     @include add-prefix(transition, $transition);
     background-color: $secondary-color-1;
+    // background-color: $black-color;
+
+
+
     left: 0;
 
     &:first-child {
@@ -337,10 +361,35 @@
     }
   }
 
+  &.header-bar {
+    &.home2 {
+      span {
+        background-color: $black-color;
+      }
+    }
+
+    &.home3 {
+      span {
+        background-color: $black-color;
+      }
+    }
+
+    &.home4 {
+      span {
+        background-color: $secondary-color-4;
+      }
+    }
+
+  }
+
   &.active {
     span {
       &:first-child {
         @include add-prefix(transform, rotate(45deg) translate(3px, 9px));
+
+        @include breakpoint(md) {
+          @include add-prefix(transform, rotate(45deg) translate(3px, 12px));
+        }
       }
 
       &:nth-child(2) {
@@ -349,6 +398,10 @@
 
       &:last-child {
         @include add-prefix(transform, rotate(-45deg) translate(3px, -9px));
+
+        @include breakpoint(md) {
+          @include add-prefix(transform, rotate(-45deg) translate(3px, -12px));
+        }
       }
     }
   }
@@ -408,7 +461,32 @@
       @include add-prefix(transition, $transition);
     }
 
-    @include breakpoint(lg) {
+    @include breakpoint(max-xl) {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px !important;
+        width: 10px;
+        height: 2px;
+        background-color: currentColor;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 24px !important;
+        width: 2px;
+        height: 10px;
+        background-color: currentColor;
+        @include add-prefix(transition, $transition);
+      }
+    }
+
+    @include breakpoint(xl) {
       &::after {
         position: absolute;
         content: "";
@@ -433,7 +511,8 @@
       }
     }
 
-    @include breakpoint(xl) {
+
+    @include breakpoint(xxl) {
       &:after {
         content: "";
         right: 2px !important;
@@ -481,10 +560,11 @@
     font-weight: 600;
   }
 
-  p { 
+  p {
     font-weight: 500;
 
     &.style2 {
+      @include font-size(18px);
       @include breakpoint(md) {
         max-inline-size: 65ch;
         margin: 0 auto;
@@ -492,7 +572,7 @@
 
       @include breakpoint(lg) {
         max-inline-size: 70ch;
-        font-size: 18px;
+        // font-size: 18px;
       }
     }
 
@@ -501,12 +581,32 @@
         max-inline-size: 50ch;
       }
     }
+
+    &.style4 {
+      @include breakpoint(md) {
+        max-inline-size: 50ch;
+        margin: 0 auto;
+      }
+
+      @include breakpoint(lg) {
+        max-inline-size: 55ch;
+        font-size: 18px;
+      }
+    }
+
+    &.mute {
+      color: $text-color;
+    }
   }
 
   a {
     @extend %mt-30;
 
     @include breakpoint(lg) {
+      margin-top: 0px;
+    }
+
+    @include breakpoint(xl) {
       margin-top: 45px;
     }
   }
@@ -522,21 +622,45 @@
       @include font-size(20px);
       font-weight: 600;
       font-family: $title-font;
-      color: $secondary-color-2;
     }
-
+ 
     &--style2 {
       @extend %justify-center;
+      color: $secondary-color-2;
+
     }
 
     &--style3 {
-      p{
-              @include font-size(18px);
-      font-weight: 500;
-      font-family: $title-font;
-      color: $secondary-color-2;
+      p {
+        @include font-size(18px);
+        font-weight: 500;
+        font-family: $title-font;
+        color: $secondary-color-2;
       }
 
+    }
+
+    &--style4 {
+      p {
+        @extend %text-medium;
+        @include font-size(18px);
+        color: $title-color;
+        text-transform: uppercase;
+      }
+
+      p::before {
+        content: "";
+        margin-right: 10px;
+        background-color: $black-color;
+        border: 2px solid $black-color;
+      }
+    }
+
+    &--style5 {
+      @extend %text-medium;
+      @include font-size(18px);
+      color: $title-color;
+      text-transform: uppercase;
     }
   }
 
@@ -558,19 +682,24 @@
 
 //  --------------  >>> page header style start here <<< ------------- //
 .pageheader {
-  padding-block-start: 250px;
-  padding-block-end: 150px;
+  padding-block-start: 140px;
+  padding-block-end: 80px;
   background-size: cover;
   background-position: center;
 
+  @include breakpoint (sm) {
+    padding-block-start: 155px;
+    padding-block-end: 100px;
+  }
+
   @include breakpoint(lg) {
-    padding-block-start: 300px;
-    padding-block-end: 200px;
+    padding-block-start: 180px;
+    padding-block-end: 120px;
   }
 
   @include breakpoint(xxl) {
-    padding-block-start: 348px;
-    padding-block-end: 244px;
+    padding-block-start: 200px;
+    padding-block-end: 120px;
   }
 
   &__content {

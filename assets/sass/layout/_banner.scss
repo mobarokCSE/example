@@ -3,7 +3,7 @@
     &.brand-1 {
         @extend %p-rel;
         @include background-cover;
-        padding-block-start: 50px;
+        padding-block-start: 130px;
         padding-block-end: 50px;
 
         &::after {
@@ -18,16 +18,13 @@
         }
 
         @include breakpoint(lg) {
-            padding-block-start: 146px;
+            padding-block-start: 200px;
             padding-block-end: 90px;
-
-            // &.brand-4 {
-            //     padding-block-start: 90px
-            // }
         }
 
         .banner-image {
-            @extend %p-rel;
+            @extend %p-rel,
+            %of-hidden;
             margin-top: 40px;
             margin-bottom: -225px;
             z-index: 1;
@@ -69,17 +66,18 @@
             background-size: cover;
             background-position: center;
             bottom: -190px;
+            z-index: -1;
         }
 
         @include breakpoint(sm) {
-            padding-block-start: 146px;
-            padding-block-end: 90px; 
+            padding-block-start: 200px;
+            padding-block-end: 90px;
         }
 
         .banner-image {
             @extend %p-rel;
             margin-top: 40px;
-            margin-bottom: -220px;
+            margin-bottom: -270px;
             z-index: 1;
 
             @include breakpoint(sm) {
@@ -109,6 +107,8 @@
     }
 
     &--style2 {
+        @extend %of-hidden;
+
         padding-block-start: 132px;
 
         @include breakpoint(lg) {
@@ -123,7 +123,9 @@
             padding-block-start: 232px;
         }
     }
+
     &--style3 {
+        @extend %of-hidden;
         padding-block-start: 132px;
 
         @include breakpoint(lg) {
@@ -167,11 +169,15 @@
             z-index: 1;
 
             h1 {
-                @extend %mb-20;
+                @extend %mb-35;
                 color: $white-color;
 
                 @include breakpoint(max-sm) {
                     @include font-size(3rem);
+                }
+
+                @include breakpoint(max-lg) {
+                    @include font-size(3.75rem)
                 }
 
                 &.title-font1 {
@@ -181,11 +187,15 @@
             }
 
             p {
-                @include font-size(18px);
+                @include font-size(16px);
                 @extend %mb-50;
                 color: $white-color;
                 max-inline-size: 80ch;
                 margin-inline: auto;
+
+                @include breakpoint(sm) {
+                    font-size: 18px;
+                }
 
                 @include breakpoint(lg) {
                     margin-bottom: 65px;
@@ -193,9 +203,11 @@
             }
 
             .play-btn {
-                display: inline-flex;
-                align-items: center;
+                @extend %d-inline-flex, %align-i-center;
+                // display: inline-flex;
+                // align-items: center;
                 color: $white-color;
+                gap: 15px;
 
                 svg {
                     @extend %me-10;
@@ -210,8 +222,8 @@
                 @extend %mb-20;
             }
 
-            .moto { 
-                @extend %mb-25;
+            .moto {
+                @extend %mb-25, %text-medium; 
                 max-inline-size: 55ch;
 
                 @include breakpoint(lg) {
@@ -376,7 +388,7 @@
                 left: 5%;
 
                 &.banner__shape-item--animation {
-                    @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                    @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
                 }
 
                 @include breakpoint(md) {
@@ -400,8 +412,6 @@
                 z-index: +1;
 
                 &.banner__shpae-item--animation {
-                    left: 20%;
-                    bottom: 0%;
                     @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
                 }
 
@@ -409,11 +419,20 @@
                     display: block;
                 }
 
-                @include breakpoint(lg) {
-                    width: 150px;
-                }
+                // @include breakpoint(lg) {
+                //     width: 120px;
+                //     z-index: 1;
+                // }
 
                 @include breakpoint(xl) {
+                    left: 15%;
+                    top: 45%;
+                    width: 140px;
+                }
+
+                @include breakpoint(xxl) {
+                    left: 12%;
+                    top: 40%;
                     width: auto;
                 }
             }
@@ -425,11 +444,10 @@
                 right: 5%;
 
                 &.banner__shpae-item--animation {
-                    top: 35%;
-                    right: 13%;
+                    @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
                 }
 
-                @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+
 
                 @include breakpoint(md) {
                     display: block;
@@ -451,7 +469,9 @@
                 top: 55%;
                 z-index: +1;
 
-
+                &.banner__shpae-item--animation {
+                    @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                }
 
                 @include breakpoint(xxl) {
                     display: block;
@@ -465,31 +485,49 @@
                 top: 45%;
                 right: 28%;
                 z-index: +1;
-                @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
 
-                @include breakpoint(lg) {
-                    width: 150px;
+                &.banner__shpae-item--animation {
+                    @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
                 }
+
+                // @include breakpoint(lg) {
+                //     width: 150px;
+                // }
 
                 @include breakpoint(xl) {
+                    width: 80px;
+                }
+                @include breakpoint(xxl) {
                     width: auto;
                 }
-            }
+            } 
 
             &:nth-child(6) {
-
+                @extend %d-none;
                 width: 50px;
                 top: 41%;
                 right: 18%;
                 z-index: +1;
                 // @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
 
-                @include breakpoint(lg) {
-                    width: 150px;
+                // @include breakpoint(md) {
+                //     display: block;
+                // }
+
+                // @include breakpoint(lg) {
+                //     width: 150px;
+                // }
+                @include breakpoint(xl) {
+                    display: block;
+                    width: auto;
+                    top: 48%;
+                    right: 11%;
                 }
 
-                @include breakpoint(xl) {
-                    width: auto;
+                @include breakpoint(xxl) {
+                    top: 41%;
+                    right: 18%;
+                    width: auto
                 }
             }
         }
@@ -511,20 +549,22 @@
                         top: 28%;
                         left: 44%;
 
-                        &.banner__icon-item--animation {
+                        &.banner__icon-item--animation { 
                             @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                        }
+                        } 
 
-                        @include breakpoint(md) {
-                            display: block;
-                        }
+                        // @include breakpoint(md) {
+                        //     display: block;
+                        // }
 
-                        @include breakpoint(lg) {
-                            width: 150px;
-                        }
-
+                        // @include breakpoint(lg) {
+                        //     width: 150px;
+                        // }
+                        // @include breakpoint(max-xl) {
+                        //     z-index: -1;
+                        // }
                         @include breakpoint(xl) {
-                            width: auto;
+                            display: block;
                         }
                     }
 
@@ -542,12 +582,22 @@
                             display: block;
                         }
 
+
                         @include breakpoint(lg) {
-                            width: 150px;
+                            display: block;
+                            right: 33%;
+                            top: 28%;
+                        }
+
+                        @include breakpoint(max-xl) {
+                            z-index: -1;
                         }
 
                         @include breakpoint(xl) {
-                            width: auto;
+                            width: 150px;
+                            right: 30%;
+                            top: 22%;
+
                         }
                     }
 
@@ -696,7 +746,7 @@
     @include breakpoint(lg) {
         padding-bottom: auto;
     }
- 
+
     &__item {
         &-inner {
             &:not(.banner-image__item-inner--style2) {

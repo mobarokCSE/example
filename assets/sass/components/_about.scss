@@ -72,6 +72,19 @@
                         padding-inline-start: 100px;
                     }
 
+                    .subtitle {
+                        @extend %p-rel;
+
+                        &::after {
+                            @extend %p-abs, %ms-10;
+                            content: "";
+                            height: 2px;
+                            width: 50px;
+                            top: 49%;
+                            background-color: $title-color;
+                        }
+                    }
+
                     h3 {
                         @extend %mb-20;
                     }
@@ -332,6 +345,40 @@
                         width: auto;
                     }
                 }
+            }
+        }
+    }
+
+    &--style5 {
+        .about {
+            &__thumb {
+                &-image {
+                    @extend %of-hidden;
+                    border-top-right-radius: 49%;
+                    border-top-left-radius: 49%;
+                    border-bottom-right-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                    background-color: #F2F3F5;
+                    object-fit: cover;
+                }
+
+                img {
+                    @extend %w-100;
+                    @include add-prefix(transition, $transition);
+                }
+
+                &:hover {
+                    img {
+                        @include add-prefix(transform, scale(1.05));
+                    }
+                }
+
+            }
+
+            &__counter {
+                @extend %d-flex,
+                %align-i-center,
+                %justify-between;
             }
         }
     }

@@ -128,7 +128,14 @@
 
 
             &:not(:last-child) {
-                @extend %mb-15;
+                @extend %mb-10;
+
+                @include breakpoint(md){
+                    margin-block-end: 10px;
+                }
+                @include breakpoint(lg){
+                    margin-block-end: 15px;
+                } 
             }
 
             a {

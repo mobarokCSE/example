@@ -22,6 +22,7 @@
             @include box(35px);
             line-height: 35px;
             border-radius: 50px;
+            transition: $transition;
 
             svg,
             i {
@@ -35,6 +36,7 @@
             @include box(35px);
             line-height: 35px;
             border-radius: 50px;
+            transition: $transition;
 
             svg,
             i {
@@ -51,6 +53,19 @@
                 color: $white-color;
             }
 
+        }
+        &--rounded5 {
+            @include add-prefix(transition, $transition);
+            @include box(35px);
+            background-color: $brand-color-1;
+            line-height: 35px;
+            border-radius: 50px;
+
+            svg,
+            i {
+                color: $white-color;
+                font-size: inherit;
+            }
         }
 
 
@@ -73,6 +88,15 @@
                 i {
                     color: $white-color;
                 }
+            }
+
+            &.social__link--rounded5 {
+                background-color: $secondary-color-1;
+                svg,
+                i {
+                    color: $black-color;
+                }
+
             }
             &.social__link--defult {
 

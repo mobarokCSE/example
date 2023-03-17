@@ -8,14 +8,15 @@
   %of-hidden,
   %text-center;
   @include font-size(16px);
-  text-decoration: none;
+  border: transparent;
+  color: $brand-color-1;
+  font-weight: 500;
   font-family: $text-font;
-  color: $brand-color-1; 
-  padding: .75rem 1rem;
+  padding: 1rem 1.65rem;
+  text-decoration: none;
   transition: $transition;
   text-transform: capitalize;
-  font-weight: 500;
-  border: transparent;
+  line-height: 1;
 
   svg {
     @extend %me-5;
@@ -68,9 +69,9 @@
     color: $white-color;
   }
 
-  &--search{
-        background-color: $brand-color-3;
-        color: $white-color;
+  &--search {
+    background-color: $brand-color-3;
+    color: $white-color;
   }
 
 
@@ -80,10 +81,13 @@
 
   }
 
+  @include breakpoint(md) {
+    @include font-size(18px);
+    padding: 1.125rem 1.85rem;
+  }
 
   @include breakpoint(xl) {
-    font-size: 18px;
-    padding: .75rem 1.5rem;
+    padding: 1.35rem 2.25rem;
   }
 
   span {
@@ -150,8 +154,10 @@
         @include add-prefix(transform, translateX(5px));
       }
     }
+
     &.trk-btn--search {
       color: $white-color;
+
       svg {
         @include add-prefix (transform, rotate(40deg));
       }
