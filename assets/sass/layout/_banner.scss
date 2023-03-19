@@ -391,201 +391,408 @@
 
 
     &__shape {
-        &-item {
-            @extend %p-abs;
 
-            &:nth-child(1) {
-                @extend %d-none;
-                width: 100px;
-                top: 20%;
-                left: 5%;
+        &--style1 {
+            .banner__shape {
+                &-item {
+                    @extend %p-abs;
 
-                &.banner__shape-item--animation {
-                    @include animation(light 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                }
+                    &:nth-child(1) {
+                        @extend %d-none;
+                        width: 100px;
+                        top: 20%;
+                        left: 5%;
 
-                @include breakpoint(md) {
-                    display: block;
-                }
+                        &.banner__shape-item--animation {
+                            @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
 
-                @include breakpoint(lg) {
-                    width: 150px;
-                }
+                        @include breakpoint(md) {
+                            display: block;
+                        }
 
-                @include breakpoint(xl) {
-                    width: auto;
-                    top: 23%;
-                    left: 0%;
-                }
+                        @include breakpoint(lg) {
+                            width: 150px;
+                        }
 
-                @include breakpoint(xxl) {
-                    width: auto;
-                    top: 20%;
-                    left: 5%;
-                }
-            }
+                        @include breakpoint(xl) {
+                            width: auto;
+                            top: 23%;
+                            left: 0%;
+                        }
 
-            &:nth-child(2) {
-                // @extend %d-none;
-                width: 50px;
-                left: 12%;
-                bottom: 10%;
-                z-index: +1;
+                        @include breakpoint(xxl) {
+                            width: auto;
+                            top: 20%;
+                            left: 5%;
+                        }
+                    }
 
-                &.banner__shpae-item--animation {
-                    @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                }
+                    &:nth-child(2) {
+                        // @extend %d-none;
+                        width: 50px;
+                        left: 12%;
+                        bottom: 10%;
+                        z-index: +1;
 
-                @include breakpoint(sm) {
-                    width: 60px;
-                    bottom: 27%;
-                    left: 7%;
-                }
-                @include breakpoint(md) {
-                    width: 80px;
-                    top: 53%;
-                    left: 7%;
-                }
+                        &.banner__shpae-item--animation {
+                            @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
 
-                @include breakpoint(lg) {
-                    width: 100px;
-                    top: 55%;
-                    // z-index: 1;
-                }
+                        @include breakpoint(sm) {
+                            width: 60px;
+                            bottom: 27%;
+                            left: 7%;
+                        }
 
-                @include breakpoint(xl) {
-                    left: 15%;
-                    top: 50%;
-                    width: 140px;
-                }
+                        @include breakpoint(md) {
+                            width: 80px;
+                            top: 53%;
+                            left: 7%;
+                        }
 
-                @include breakpoint(xxl) {
-                    left: 22%;
-                    top: 42%;
-                    width: auto;
-                }
-            }
+                        @include breakpoint(lg) {
+                            width: 100px;
+                            top: 55%;
+                            // z-index: 1;
+                        }
 
-            &:nth-child(3) {
-                @extend %d-none;
-                width: 100px;
-                top: 15%;
-                right: 5%;
+                        @include breakpoint(xl) {
+                            left: 15%;
+                            top: 50%;
+                            width: 140px;
+                        }
 
-                &.banner__shpae-item--animation {
-                    @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                }
+                        @include breakpoint(xxl) {
+                            left: 22%;
+                            top: 42%;
+                            width: auto;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        @extend %d-none;
+                        width: 100px;
+                        top: 15%;
+                        right: 5%;
+
+                        &.banner__shpae-item--animation {
+                            @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
 
 
 
-                @include breakpoint(md) {
-                    display: block;
-                    top: 23%;
-                }
+                        @include breakpoint(md) {
+                            display: block;
+                            top: 23%;
+                        }
 
-                @include breakpoint(lg) {
-                    width: 120px;
-                    top: 20%;
-                }
+                        @include breakpoint(lg) {
+                            width: 120px;
+                            top: 20%;
+                        }
 
-                @include breakpoint(xl) {
-                    width: auto;
-                }
+                        @include breakpoint(xl) {
+                            width: auto;
+                        }
 
-                @include breakpoint(xxl) {
-                    top: 28%;
-                    right: 15%;
-                    width: auto;
-                }
-            }
+                        @include breakpoint(xxl) {
+                            top: 28%;
+                            right: 15%;
+                            width: auto;
+                        }
+                    }
 
-            &:nth-child(4) {
-                // @extend %d-none;
-                width: 50px;
-                right: 7%;
-                z-index: +1;
+                    &:nth-child(4) {
+                        // @extend %d-none;
+                        width: 50px;
+                        right: 7%;
+                        z-index: +1;
 
-                &.banner__shpae-item--animation {
-                    @include animation(rotate 9s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                }
+                        &.banner__shpae-item--animation {
+                            @include animation(rotate 9s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
 
-                @include breakpoint(sm) {
-                    right: 7%;
-                    top: 64%;
-                    width: 60px;
-                }
+                        @include breakpoint(sm) {
+                            right: 7%;
+                            top: 64%;
+                            width: 60px;
+                        }
 
-                @include breakpoint(md) {
-                    top: 55%;
-                    width: 70px;
-                }
+                        @include breakpoint(md) {
+                            top: 55%;
+                            width: 70px;
+                        }
 
-                @include breakpoint(lg) {
-                    width: 80px;
-                }
+                        @include breakpoint(lg) {
+                            width: 80px;
+                        }
 
-                @include breakpoint(xl) {
-                    width: auto;
-                }
+                        @include breakpoint(xl) {
+                            width: auto;
+                        }
 
-                @include breakpoint(xxl) {
-                    width: auto;
-                }
-            }
+                        @include breakpoint(xxl) {
+                            width: auto;
+                        }
+                    }
 
-            &:nth-child(5) {
+                    &:nth-child(5) {
 
-                width: 50px;
-                top: 45%;
-                right: 28%;
-                z-index: +1;
+                        width: 50px;
+                        top: 45%;
+                        right: 28%;
+                        z-index: +1;
 
-                &.banner__shpae-item--animation {
-                    @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                }
+                        &.banner__shpae-item--animation {
+                            @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
 
-                // @include breakpoint(lg) {
-                //     width: 150px;
-                // }
+                        // @include breakpoint(lg) {
+                        //     width: 150px;
+                        // }
 
-                @include breakpoint(xl) {
-                    width: 80px;
-                }
+                        @include breakpoint(xl) {
+                            width: 80px;
+                        }
 
-                @include breakpoint(xxl) {
-                    width: auto;
-                }
-            }
+                        @include breakpoint(xxl) {
+                            width: auto;
+                        }
+                    }
 
-            &:nth-child(6) {
-                @extend %d-none;
-                width: 50px;
-                top: 41%;
-                right: 18%;
-                z-index: +1;
-                // @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                    &:nth-child(6) {
+                        @extend %d-none;
+                        width: 50px;
+                        top: 41%;
+                        right: 18%;
+                        z-index: +1;
+                        // @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
 
-                // @include breakpoint(md) {
-                //     display: block;
-                // }
+                        // @include breakpoint(md) {
+                        //     display: block;
+                        // }
 
-                // @include breakpoint(lg) {
-                //     width: 150px;
-                // }
-                @include breakpoint(xl) {
-                    display: block;
-                    width: auto;
-                    top: 48%;
-                    right: 11%;
-                }
+                        // @include breakpoint(lg) {
+                        //     width: 150px;
+                        // }
+                        @include breakpoint(xl) {
+                            display: block;
+                            width: auto;
+                            top: 48%;
+                            right: 11%;
+                        }
 
-                @include breakpoint(xxl) {
-                    top: 41%;
-                    right: 18%;
-                    width: auto
+                        @include breakpoint(xxl) {
+                            top: 41%;
+                            right: 18%;
+                            width: auto
+                        }
+                    }
                 }
             }
         }
+        &--style2 {
+            .banner__shape {
+                &-item {
+                    @extend %p-abs;
+
+                    &:nth-child(1) {
+                        @extend %d-none;
+                        width: 100px;
+                        top: 20%;
+                        left: 5%;
+
+                        &.banner__shape-item--animation {
+                            @include animation(light 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
+
+                        @include breakpoint(md) {
+                            display: block;
+                        }
+
+                        @include breakpoint(lg) {
+                            width: 150px;
+                        }
+
+                        @include breakpoint(xl) {
+                            width: auto;
+                            top: 23%;
+                            left: 0%;
+                        }
+
+                        @include breakpoint(xxl) {
+                            width: auto;
+                            top: 20%;
+                            left: 5%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        // @extend %d-none;
+                        width: 50px;
+                        left: 12%;
+                        bottom: 10%;
+                        z-index: +1;
+
+                        &.banner__shpae-item--animation {
+                            @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
+
+                        @include breakpoint(sm) {
+                            width: 60px;
+                            bottom: 27%;
+                            left: 7%;
+                        }
+
+                        @include breakpoint(md) {
+                            width: 80px;
+                            top: 53%;
+                            left: 7%;
+                        }
+
+                        @include breakpoint(lg) {
+                            width: 100px;
+                            top: 55%;
+                            // z-index: 1;
+                        }
+
+                        @include breakpoint(xl) {
+                            left: 15%;
+                            top: 50%;
+                            width: 140px;
+                        }
+
+                        @include breakpoint(xxl) {
+                            left: 22%;
+                            top: 42%;
+                            width: auto;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        @extend %d-none;
+                        width: 100px;
+                        top: 15%;
+                        right: 5%;
+
+                        &.banner__shpae-item--animation {
+                            @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
+
+
+
+                        @include breakpoint(md) {
+                            display: block;
+                            top: 23%;
+                        }
+
+                        @include breakpoint(lg) {
+                            width: 120px;
+                            top: 20%;
+                        }
+
+                        @include breakpoint(xl) {
+                            width: auto;
+                        }
+
+                        @include breakpoint(xxl) {
+                            top: 28%;
+                            right: 15%;
+                            width: auto;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        // @extend %d-none;
+                        width: 50px;
+                        right: 7%;
+                        z-index: +1;
+
+                        &.banner__shpae-item--animation {
+                            @include animation(rotate 9s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
+
+                        @include breakpoint(sm) {
+                            right: 7%;
+                            top: 64%;
+                            width: 60px;
+                        }
+
+                        @include breakpoint(md) {
+                            top: 55%;
+                            width: 70px;
+                        }
+
+                        @include breakpoint(lg) {
+                            width: 80px;
+                        }
+
+                        @include breakpoint(xl) {
+                            width: auto;
+                        }
+
+                        @include breakpoint(xxl) {
+                            width: auto;
+                        }
+                    }
+
+                    // &:nth-child(5) {
+
+                    //     width: 50px;
+                    //     top: 45%;
+                    //     right: 28%;
+                    //     z-index: +1;
+
+                    //     &.banner__shpae-item--animation {
+                    //         @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                    //     }
+
+                    //     // @include breakpoint(lg) {
+                    //     //     width: 150px;
+                    //     // }
+
+                    //     @include breakpoint(xl) {
+                    //         width: 80px;
+                    //     }
+
+                    //     @include breakpoint(xxl) {
+                    //         width: auto;
+                    //     }
+                    // }
+
+                    // &:nth-child(6) {
+                    //     @extend %d-none;
+                    //     width: 50px;
+                    //     top: 41%;
+                    //     right: 18%;
+                    //     z-index: +1;
+                    //     // @include animation(zoom 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+
+                    //     // @include breakpoint(md) {
+                    //     //     display: block;
+                    //     // }
+
+                    //     // @include breakpoint(lg) {
+                    //     //     width: 150px;
+                    //     // }
+                    //     @include breakpoint(xl) {
+                    //         display: block;
+                    //         width: auto;
+                    //         top: 48%;
+                    //         right: 11%;
+                    //     }
+
+                    //     @include breakpoint(xxl) {
+                    //         top: 41%;
+                    //         right: 18%;
+                    //         width: auto
+                    //     }
+                    // }
+                }
+            }
+        }
+
     }
 
 
@@ -809,7 +1016,7 @@
 
                 span {
                     @extend %d-inline-flex;
-                    min-width: 50px;
+                    min-width: 32px;
                 }
             }
         }
@@ -839,7 +1046,14 @@
                         span {
                             @extend %p-abs,
                             %pos-center;
-                            font-size: 12px;
+                            font-size: 12px; 
+
+                            &.purecounter{
+                                    margin-inline-start: -3px;
+                            }
+                            &.plus{
+                                margin-inline-start: 8px;
+                            }
                         }
                     }
                 }
