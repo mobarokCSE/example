@@ -179,7 +179,7 @@
 
         &-designation {
           h6 {
-            @extend %mb-5;
+            @extend %mb-0;
             font-weight: 600;
 
 
@@ -201,7 +201,7 @@
         }
 
         @include breakpoint(max-sm) {
-          font-size: 14px;
+          font-size: 12px;
           margin-block-start: 5px;
           margin-inline-start: 76px;
         }
@@ -279,6 +279,10 @@
         @extend %mb-25;
 
         @include breakpoint(lg) {
+          margin-block-end: 15px;
+        }
+
+        @include breakpoint(xl) {
           margin-block-end: 65px
         }
 
@@ -367,9 +371,10 @@
       &__storyteller {
         @extend %d-flex,
         %align-i-center,
-        %p-10;
+        %p-15,
+        %c-pointer;
         @include add-prefix(transition, $transition);
-        gap: 10px;
+        gap: 15px;
 
         &-content {
           h6 {
@@ -383,13 +388,18 @@
 
 
 
-        .swiper-slide {
+
+
+      }
+
+      &__author3 {
+        .swiper-slide-thumb {
           &-active {
             background-color: $white-color;
           }
         }
-
       }
+
 
 
     }

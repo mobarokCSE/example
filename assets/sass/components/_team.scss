@@ -17,6 +17,27 @@
                         @include add-prefix(transition, $transition);
                         object-fit: cover;
                     }
+
+                    // &--style1 {
+                    //     // background-color: #010B12;
+                    //     img{
+
+                    //     }
+
+                    //     &::before {
+                    //         content: "";
+                    //         display: block;
+                    //         position: absolute;
+                    //         top: 0;
+                    //         bottom: 0;
+                    //         left: 0;
+                    //         right: 0;
+                    //         // background: #010B12;
+                    //         background-color: rgba($color: $title-color, $alpha: .40);
+                    //         border-radius: 16px;
+
+                    //     }
+                    // }
                 }
 
                 &-content {
@@ -85,6 +106,9 @@
                             img {
                                 @include add-prefix(transform, scale(1.05));
                             }
+
+
+
                         }
 
                         &-author {
@@ -228,6 +252,9 @@
             }
 
             &__content {
+                h4{
+                    @extend %text-semibold;
+                }
                 .designation {
                     @extend %mb-10;
                     color: $text-color-light;
@@ -240,7 +267,7 @@
                     svg {
                         color: $secondary-color-4;
                     }
-                } 
+                }
 
                 .info {
                     @extend %mt-25;

@@ -30,7 +30,7 @@
             }
 
             &__content {
-                @extend %p-30;
+                @extend %px-30, %pt-40, %pb-40;
                 border-top-left-radius: 15px;
                 border-bottom-left-radius: 15px;
 

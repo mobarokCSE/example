@@ -288,7 +288,11 @@
         }
 
         &-content {
-          @extend %p-25;
+          @extend %p-15; 
+
+          @include breakpoint(lg){
+            padding: 25px;
+          }
 
           @include breakpoint(md) {
             max-width: 47%;
@@ -634,7 +638,8 @@
               }
 
               &:hover {
-                color: $black-color;
+                background-color: $title-color;
+                color: $white-color;
               }
             }
           }

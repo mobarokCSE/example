@@ -1,28 +1,38 @@
 .counter {
     @extend %of-hidden;
+
     &--style1 {
         .counter {
+            &__wrapper {
+                @extend %py-45;
+
+                @include breakpoint (md) {
+                    padding-block: 55px;
+                }
+
+                @include breakpoint (xl) {
+                    padding-block: 80px;
+                }
+            }
+
+
             &__item {
-
-
                 &-inner {
-                    @extend %py-40,
-                    %text-center;
-                    @include breakpoint (sm){
-                        padding-block: 65px;
-                    }
+                    @extend %text-center;
+
                 }
 
                 &-thumb {
                     @extend %mb-20;
-                    @include breakpoint (sm){
+
+                    @include breakpoint (sm) {
                         margin-block-end: 30px;
                     }
                 }
 
                 &-content {
                     h3 {
-                        @extend %mb-20;
+                        @extend %mb-10;
                         color: $white-color;
 
                     }
@@ -38,27 +48,28 @@
         .col-lg-3 {
             &:not(:last-child) {
                 .counter__item {
-                    @include breakpoint (lg){
-                    position: relative;
+                    @include breakpoint (lg) {
+                        position: relative;
 
-                    &::before {
-                        position: absolute;
-                        content: "";
-                        width: 2px;
-                        height: 101px;
-                        left: auto;
-                        right: 0;
-                        top: 30%;
-                        background-color: $brand2-bg-1;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 2px;
+                            height: 101px;
+                            left: auto;
+                            right: 0;
+                            top: 30%;
+                            background-color: $brand2-bg-1;
+                            opacity: 0.5;
 
-                        // @include breakpoint(md) {
-                        //     width: 2px;
-                        //     height: 101px;
-                        //     left: auto;
-                        //     right: 0;
-                        //     top: 30%;
-                        // } 
-                    }
+                            // @include breakpoint(md) {
+                            //     width: 2px;
+                            //     height: 101px;
+                            //     left: auto;
+                            //     right: 0;
+                            //     top: 30%;
+                            // } 
+                        }
                     }
 
                 }
@@ -69,25 +80,36 @@
     &--style2 {
         .counter {
             &__wrapper {
-                @include breakpoint(max-md) {
-                    padding-block: 30px;
+                @extend %py-45;
+
+                @include breakpoint (md) {
+                    padding-block: 55px;
+                }
+
+                @include breakpoint (xl) {
+                    padding-block: 80px;
                 }
             }
 
             &__item {
 
                 &-inner {
-                    @extend %d-flex;
-                    gap: 25px;
+                    @extend %text-center, %d-grid;
+                    gap: 20px;
 
-                    // @include breakpoint(lg) {
-                    //     padding-block: 65px;
-                    // }
-                    @include breakpoint(md) {
-                        padding-block: 45px;
+                    @include breakpoint(lg){
+                        text-align: left;
+                        display: flex;
+                        gap: 25px;
+                        
                     }
-                    @include breakpoint(lg) {
-                        padding-block: 65px;
+                }
+                &-thumb{
+                    img{
+                        max-width: 60px;
+                        @include breakpoint (xl){
+                            max-width: 100%;
+                        }
                     }
                 }
 
@@ -95,8 +117,12 @@
 
                 &-content {
                     h3 {
-                        @extend %mb-5;
+                        @extend %mb-0;
                         color: $white-color;
+
+                        @include breakpoint (lg){
+                            margin-block-end: 5px;
+                        }
 
                     }
 

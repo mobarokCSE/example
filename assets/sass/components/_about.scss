@@ -73,20 +73,43 @@
                     }
 
                     .subtitle {
-                        @extend %p-rel;
+                        @extend %p-rel,
+                        %text-medium;
+                        color: $title-color;
 
                         &::after {
-                            @extend %p-abs, %ms-10;
+                            @extend %p-abs;
                             content: "";
                             height: 2px;
                             width: 50px;
                             top: 49%;
+                            left: 25%;
                             background-color: $title-color;
+
+                            @include breakpoint (sm) {
+                                left: 17%
+                            }
+
+                            @include breakpoint (md) {
+                                left: 13%
+                            }
+
+                            @include breakpoint (lg) {
+                                left: 21%
+                            }
+
+                            @include breakpoint (xl) {
+                                left: 20%
+                            }
+
+                            @include breakpoint (xxl) {
+                                left: 17%
+                            }
                         }
                     }
 
-                    h3 {
-                        @extend %mb-20;
+                    h2 {
+                        @extend %my-20;
                     }
 
                     p {
@@ -140,6 +163,18 @@
     &--style2 {
         .about {
 
+            &__thumb {
+                &-image {
+                    @include breakpoint(sm) {
+                        text-align: center
+                    }
+
+                    @include breakpoint(lg) {
+                        text-align: left
+                    }
+                }
+            }
+
             &__content {
                 .section-header {
                     @extend %mb-40;
@@ -148,8 +183,13 @@
 
                 &-item {
                     @extend %d-flex,
+                    %mb-25,
                     %align-i-start;
                     gap: 15px;
+
+                    p {
+                        @extend %mb-0;
+                    }
                 }
 
                 a {
@@ -223,20 +263,21 @@
                     @extend %p-abs;
 
                     &:nth-child(1) {
-                        display: none;
+                        // display: none;
                         width: 100px;
-                        top: 8%;
+                        top: 0%;
                         left: 0%;
 
-                        // &.banner__icon-item--animation {
-                        //     @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
-                        // }
+                        &.about__icon-item--animation {
+                            @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
+                        }
 
-                        @include breakpoint(md) {
-                            display: block;
+                        @include breakpoint(sm) {
+                            top: 8%;
                         }
 
                         @include breakpoint(lg) {
+                            top: 0%;
                             width: 150px;
                         }
 
@@ -246,24 +287,33 @@
                     }
 
                     &:nth-child(2) {
-                        display: none;
-                        width: 100px;
-                        right: 10%;
-                        top: 10%;
+                        // display: none;
+                        width: 80px;
+                        right: 0%;
+                        top: 0%;
 
                         &.about__icon-item--animation {
                             @include animation(floating 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
                         }
 
-                        @include breakpoint(md) {
-                            display: block;
+                        @include breakpoint(sm) {
+                            width: 100px;
+                            right: 0%;
+                            top: 10%;
                         }
 
-                        @include breakpoint(lg) {
+                        @include breakpoint(md) {
                             width: 150px;
                         }
 
+                        @include breakpoint(lg) {
+                            top: 4%;
+                            right: -11%;
+                        }
+
                         @include breakpoint(xl) {
+                            right: 8%;
+                            top: 3%;
                             width: auto;
                         }
                     }
@@ -334,6 +384,7 @@
                     width: 100px;
                     top: 15%;
                     right: 8%;
+                    z-index: -1;
 
                     @include animation(left-right 2s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate);
 
@@ -379,6 +430,9 @@
                 @extend %d-flex,
                 %align-i-center,
                 %justify-between;
+                gap: 10px;
+
+
             }
         }
     }

@@ -2,11 +2,7 @@
     @extend %of-hidden;
 
     &__wrapper {
-        // img {
-        //     width: 100%;
-        // }
-
-
+        @extend %text-center;
     }
 
     &__item {

@@ -53,21 +53,20 @@
 
           ::placeholder {
             color: #fff;
-            opacity: 1;
+            opacity: 999;
           }
         }
 
         .cta-btn {
-          padding: 19.5px;
+          padding: 19px;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
           background: $brand-color-2;
           border-color: $brand-color-2;
-          // margin-left: -25px;
           @include font-size(16px);
 
           @include breakpoint(sm) {
-            padding: 19.5px 30px; 
+            padding: 19px 30px; 
           }
         }
       }

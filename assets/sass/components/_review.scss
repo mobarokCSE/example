@@ -2,9 +2,10 @@
     &__item {
         &-author{
             @extend %p-25;
-            p{
-                @extend  %text-regular;
+            h6{
+                @extend  %text-medium;
                 @include font-size(18px);
+                font-family: $text-font;
                 color: $title-color;
                 margin-block-end: 7px;
             }

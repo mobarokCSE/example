@@ -239,7 +239,7 @@ const studentreview = new Swiper('.studentreview__slider', {
             slidesPerView: 2,
         },
         992: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 15,
         },
         1200: {
@@ -349,11 +349,25 @@ const Swiper7 = new Swiper('.testimonial__slider2', {
 // team slider 
 const swiper11 = new Swiper('.team__slider1', {
     slidesPerView: 2,
-    direction: "vertical",
     grabCursor: true,
     spaceBetween: 24,
-    mousewheel: true,
     loop: true,
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        // 1200: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 25,
+        // },
+    },
     autoplay: {
         delay: 1,
         disableOnInteraction: true,
@@ -362,17 +376,31 @@ const swiper11 = new Swiper('.team__slider1', {
 });
 const swiper12 = new Swiper('.team__slider2', {
     slidesPerView: 2,
-    direction: "vertical",
     grabCursor: true,
     spaceBetween: 24,
-    mousewheel: true,
     loop: true,
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        // 1200: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 25,
+        // },
+    },
     autoplay: {
         delay: 1,
         reverseDirection: true,
         disableOnInteraction: true,
     },
-    speed: 4000,
+    speed: 5000,
 });
 
 
@@ -383,7 +411,7 @@ var testimonialStoryteller = new Swiper(".testimonial__author3", {
     freeMode: true,
     watchSlidesProgress: true,
     loop: true,
-    // clickable: true,
+    clickable: true,
     breakpoints: {
         576: {
             slidesPerView: 1,
@@ -433,6 +461,10 @@ const BlogSlider = new Swiper('.blog__slider', {
             slidesPerView: 2,
         },
         992: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1200: {
             slidesPerView: 4,
             spaceBetween: 15,
         },
@@ -517,5 +549,5 @@ document.querySelector('.scrollToTop').addEventListener('click', function (e) {
 
 
 // =================== count start here =================== //
-VanillaCounter();
+new PureCounter();
 // =================== count end here =================== //

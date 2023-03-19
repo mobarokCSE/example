@@ -12,11 +12,15 @@
   color: $brand-color-1;
   font-weight: 500;
   font-family: $text-font;
-  padding: 1rem 1.65rem;
+  padding: 1.125rem 1.85rem;
   text-decoration: none;
   transition: $transition;
   text-transform: capitalize;
   line-height: 1;
+
+  @include breakpoint(xl) {
+    padding: 1.25rem 1.85rem;
+  }
 
   svg {
     @extend %me-5;
@@ -25,10 +29,22 @@
 
   &--rounded {
     border-radius: 50px;
+    padding: 1.125rem 1.85rem;
+
+    @include breakpoint(xl) {
+      @include font-size(18px);
+      padding: 1.25rem 2.25rem;
+    }
   }
 
   &--border {
     border-radius: 8px;
+    padding: 1.125rem 1.85rem;
+
+    @include breakpoint(xl) {
+      @include font-size(18px);
+      padding: 1.35rem 1.85rem;
+    }
   }
 
   &--primary1 {
@@ -81,14 +97,7 @@
 
   }
 
-  @include breakpoint(md) {
-    @include font-size(18px);
-    padding: 1.125rem 1.85rem;
-  }
 
-  @include breakpoint(xl) {
-    padding: 1.35rem 2.25rem;
-  }
 
   span {
     position: inherit;
@@ -102,10 +111,10 @@
   }
 
 
-  &--small {
-    // line-height: 46px;
-    padding: 1.125rem 2.5rem;
-  }
+  // &--small {
+  //   // line-height: 46px;
+  //   padding: 1.125rem 2.5rem;
+  // }
 
 
 
@@ -159,7 +168,7 @@
       color: $white-color;
 
       svg {
-        @include add-prefix (transform, rotate(40deg));
+        @include add-prefix (transform, rotate(10deg));
       }
     }
 
@@ -181,10 +190,22 @@
     &.brand-2 {
       border: 1.5px solid $brand-color-2;
       border-radius: 8px;
+      padding: 1.125rem 1.85rem;
+
+      @include breakpoint(xl) {
+        @include font-size(18px);
+        padding: 1.25rem 1.85rem;
+      }
     }
 
     &.brand-3 {
       border: 1.5px solid $brand-color-3;
+      padding: 1.125rem 1.85rem;
+
+      @include breakpoint(xl) {
+        @include font-size(18px);
+        padding: 1.25rem 1.85rem;
+      }
     }
 
 
@@ -254,5 +275,33 @@
 
   &--gap-lg {
     gap: 2rem;
+  }
+}
+
+
+// tab button
+
+.tab-btn {
+  @extend 
+  %d-inline-block,
+  %of-hidden,
+  %text-center;
+  @include font-size(16px);
+  border: transparent;
+  color: $brand-color-1;
+  font-weight: 500;
+  font-family: $text-font;
+  // padding: 1rem 1.2rem;
+  padding: .75rem 1rem;
+  text-decoration: none;
+  transition: $transition;
+  text-transform: capitalize;
+  line-height: 1;
+
+  // @include breakpoint(xl) {
+  //   padding: 1.25rem 1.85rem;
+  // }
+  @include breakpoint(xxl) {
+    padding: 1.25rem 1.85rem;
   }
 }

@@ -155,7 +155,15 @@
 
     &--style3 {
         .categories {
+            &__header {
+                .style3 {
+                    @extend %mb-40;
+                }
+            }
+
             &__item {
+                @extend %p-rel;
+
                 &-thumb {
                     @extend %of-hidden,
                     %mb-25;
@@ -170,7 +178,8 @@
                 &-content {
                     @extend %text-center;
 
-                    a { @extend %text-semibold;
+                    a {
+                        @extend %text-semibold;
                         color: $title-color;
                         @include font-size(18px);
 
@@ -227,6 +236,15 @@
                     @extend %text-center,
                     %py-35,
                     %px-25;
+                    @include breakpoint (lg){
+                        padding-inline: 15px;
+                    }
+                    @include breakpoint (xl){
+                        padding-inline: 20px;
+                    }
+                    @include breakpoint (xxl){
+                        padding-inline: 25px;
+                    }
 
                     img {
                         @extend %text-center,

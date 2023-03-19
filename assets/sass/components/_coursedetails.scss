@@ -12,12 +12,18 @@
                     color: $text-color;
                 }
 
+
+            }
+
+            &__focus {
                 .star {
                     @extend %text-semibold;
                     color: $rating-color;
 
                     svg {
+                        // @include font-size(14px);
                         color: $rating-color;
+
                     }
                 }
 
@@ -131,16 +137,20 @@
                             @include add-prefix(transition, $transition);
                             object-fit: cover;
 
-                            &:hover{
-                                 @include add-prefix(transform, scale(1.03));
+                            &:hover {
+                                @include add-prefix(transform, scale(1.03));
                             }
                         }
                     }
-                    .info{
-                        h6{
-                            @extend %text-medium, %mb-10;
+
+                    .info {
+                        h6 {
+                            @extend %text-medium,
+                            %mb-5;
+                            @include font-size(18px);
                         }
-                        a{
+
+                        a {
                             color: $brand1-text-1;
                         }
                     }
@@ -153,6 +163,7 @@
                 transition: $transition;
 
                 img {
+                    width: 100%;
                     border-top-left-radius: 15px;
                     border-top-right-radius: 15px;
                 }
@@ -183,6 +194,8 @@
             &__package {
                 border: 1px solid $border-color;
                 border-radius: 15px;
+                position: sticky;
+                top: 130px;
             }
 
             &__offer {
@@ -283,7 +296,7 @@
 
                 &-designation {
                     h6 {
-                        @extend %mb-5;
+                        @extend %mb-0;
                         font-weight: 600;
 
 
@@ -350,13 +363,20 @@
     &--style2 {
         .coursedetails {
             &__header {
-                @extend %d-flex,
-                %align-i-center,
+                @extend %align-i-center,
                 %justify-between,
                 %mb-30;
 
                 h3 {
-                    @extend %mb-0;
+                    @extend %mb-15;
+
+                    @include breakpoint(sm) {
+                        margin-block-end: 0px;
+                    }
+                }
+
+                @include breakpoint(sm) {
+                    display: flex;
                 }
 
             }

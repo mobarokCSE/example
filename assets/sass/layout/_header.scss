@@ -68,9 +68,9 @@
       %align-i-end,
       %justify-between;
 
-      @include breakpoint(lg) {
-        min-width: 80%;
-      }
+      // @include breakpoint(lg) {
+      //   min-width: 80%;
+      // }
 
       @include breakpoint(xl) {
         min-width: 75%;
@@ -136,9 +136,9 @@
   %mb-0;
   column-gap: 10px;
 
-  @include breakpoint(lg) {
-    margin-right: 50px;
-  }
+  // @include breakpoint(lg) {
+  //   margin-right: 50px;
+  // }
 
   >li {
     >a {
@@ -330,8 +330,8 @@
   @extend %ms-30;
 
   @include breakpoint (md) {
-    width: 35px;
-    height: 25px;
+    width: 30px;
+    height: 24px;
   }
 
   span {
@@ -362,6 +362,12 @@
   }
 
   &.header-bar {
+    &.home1 {
+      span {
+        background-color: $white-color;
+      }
+    }
+
     &.home2 {
       span {
         background-color: $black-color;
@@ -376,7 +382,7 @@
 
     &.home4 {
       span {
-        background-color: $secondary-color-4;
+        background-color: $white-color;
       }
     }
 
@@ -556,6 +562,21 @@
     @extend %mb-20;
   }
 
+  .about-title {
+    @include breakpoint (md) {
+      font-size: 24px;
+    }
+    @include breakpoint (lg) {
+      font-size: 28px;
+    }
+    @include breakpoint (xl) {
+      font-size: 36px;
+    } 
+    @include breakpoint (xxl) {
+      font-size: 48px;
+    }
+  }
+
   h6 {
     font-weight: 600;
   }
@@ -565,6 +586,7 @@
 
     &.style2 {
       @include font-size(18px);
+
       @include breakpoint(md) {
         max-inline-size: 65ch;
         margin: 0 auto;
@@ -611,58 +633,58 @@
     }
   }
 
-  .subtitle {
-    @extend %d-flex,
-    %align-i-center;
-    gap: 10px;
+  // .subtitle {
+  //   @extend %d-flex,
+  //   %align-i-center;
+  //   gap: 10px;
 
 
 
-    p {
-      @include font-size(20px);
-      font-weight: 600;
-      font-family: $title-font;
-    }
- 
-    &--style2 {
-      @extend %justify-center;
-      color: $secondary-color-2;
+  //   p {
+  //     @include font-size(20px);
+  //     font-weight: 600;
+  //     font-family: $title-font;
+  //   }
 
-    }
+  //   &--style2 {
+  //     @extend %justify-center;
+  //     color: $secondary-color-2;
 
-    &--style3 {
-      p {
-        @include font-size(18px);
-        font-weight: 500;
-        font-family: $title-font;
-        color: $secondary-color-2;
-      }
+  //   }
 
-    }
+  //   &--style3 {
+  //     p {
+  //       @include font-size(18px);
+  //       font-weight: 500;
+  //       font-family: $title-font;
+  //       color: $secondary-color-2;
+  //     }
 
-    &--style4 {
-      p {
-        @extend %text-medium;
-        @include font-size(18px);
-        color: $title-color;
-        text-transform: uppercase;
-      }
+  //   }
 
-      p::before {
-        content: "";
-        margin-right: 10px;
-        background-color: $black-color;
-        border: 2px solid $black-color;
-      }
-    }
+  //   &--style4 {
+  //     p {
+  //       @extend %text-medium;
+  //       @include font-size(18px);
+  //       color: $title-color;
+  //       text-transform: uppercase;
+  //     }
 
-    &--style5 {
-      @extend %text-medium;
-      @include font-size(18px);
-      color: $title-color;
-      text-transform: uppercase;
-    }
-  }
+  //     p::before {
+  //       content: "";
+  //       margin-right: 10px;
+  //       background-color: $black-color;
+  //       border: 2px solid $black-color;
+  //     }
+  //   }
+
+  //   &--style5 {
+  //     @extend %text-medium;
+  //     @include font-size(18px);
+  //     color: $title-color;
+  //     text-transform: uppercase;
+  //   }
+  // }
 
   &--dark {
     color: $white-color;
@@ -677,6 +699,61 @@
       max-inline-size: 20ch;
       margin: auto;
     }
+  }
+}
+
+
+
+.subtitle {
+  @extend %d-flex,
+  %align-i-center;
+  gap: 10px;
+
+
+
+  p {
+    @include font-size(20px);
+    font-weight: 600;
+    font-family: $title-font;
+  }
+
+  &--style2 {
+    @extend %justify-center;
+    color: $secondary-color-2;
+
+  }
+
+  &--style3 {
+    p {
+      @include font-size(18px);
+      font-weight: 500;
+      font-family: $title-font;
+      color: $secondary-color-2;
+    }
+
+  }
+
+  &--style4 {
+    p {
+      @extend %text-medium;
+      @include font-size(18px);
+      color: $title-color;
+      text-transform: uppercase;
+    }
+
+    p::before {
+      content: "";
+      margin-right: 10px;
+      background-color: $black-color;
+      border: 2px solid $black-color;
+    }
+  }
+
+  &--style5 {
+    @extend %text-medium;
+    @include font-size(18px);
+    color: $title-color;
+    text-transform: uppercase;
   }
 }
 
