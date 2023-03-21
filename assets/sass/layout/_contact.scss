@@ -15,13 +15,13 @@
     &-thumb {
       @extend %p-rel;
       @include box(80px);
-      background-color: $brand-bg-1;
+      background-color: $contact-bg;
       border-radius: 50px;
 
       svg {
         @extend %p-abs,
         %pos-center;
-        @include font-size(48px);
+        @include font-size(42px);
         color: $brand-color-1;
       }
     }
@@ -39,15 +39,48 @@
   }
 
   &__form {
-    @extend %p-50;
+    @extend %p-30;
     background-color: $brand-bg-1;
     border-radius: 16px;
+    @include breakpoint(md){
+      padding: 50px;
+    }
+    @include breakpoint(lg){
+      padding: 30px;
+    }
+    @include breakpoint(xl){
+      padding: 50px;
+    }
+
+    h3{
+      @extend %mb-10;
+    }
+    p{
+      @extend %mb-30;
+      color: $text-color;
+    }
+
+    .form-control{
+      &::placeholder{
+        color: $text-color-light;
+      }
+    }
+    .account__form-passcheck{
+      @extend %mt-15;
+    }
+    .form-check-label{
+      a{
+        text-decoration: underline;
+      }
+    }
 
   }
 
   &__map{
     .map{
           border-radius: 16px;
+            width: 100%;
+            height: 510px;
     }
 
   }

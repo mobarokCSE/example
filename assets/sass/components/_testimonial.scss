@@ -350,7 +350,16 @@
               transition: $transition;
               width: 60px;
 
+
+
+
               @include breakpoint(sm) {
+                width: auto;
+              }
+              @include breakpoint(md){
+                width: 50px;
+              }
+              @include breakpoint(lg){
                 width: auto;
               }
             }
@@ -362,7 +371,7 @@
                 @include add-prefix (transform, scale(1.05));
               }
 
-            }
+            } 
           }
 
         }
@@ -385,10 +394,6 @@
             color: $text-color-light;
           }
         }
-
-
-
-
 
       }
 

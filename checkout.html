@@ -110,15 +110,17 @@
 
 
 
+
+
     <!-- ==========Page Header Section Starts Here========== -->
-    <div class="pageheader" style="background-image:url(assets/images/bg/home1/9.png)">
+    <div class="pageheader" style="background-image:url(assets/images/bg/home1/2.png)">
         <div class="container">
             <div class="pageheader__content">
-                <h2>Login</h2>
+                <h2>Course</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Login</li>
+                        <li class="breadcrumb-item active" aria-current="page">Course</li>
                     </ol>
                 </nav>
             </div>
@@ -128,97 +130,197 @@
 
 
 
-    <!-- ===============>> account start here <<================= -->
-    <section class="account padding-top padding-bottom">
-        <div class="container-fluid">
-            <div class="account__wrapper" data-aos="fade-up" data-aos-duration="800">
-                <div class="row g-4">
-                    <div class="col-lg-12">
-                        <div class="account__content">
-                            <!-- account tittle -->
-                            <div class="account__header">
-                                <h3>Log in to your account</h3>
-                                <p>Welcome back! Please enter your details.</p>
-                            </div>
-                            <!-- account form -->
-                            <form action="#" class="account__form needs-validation" novalidate>
-                                <div class="row g-4">
-                                    <div class="col-lg-12">
-                                        <div class="input-group">
-                                            <input type="email" class="form-control" id="account-email"
-                                                placeholder="Enter your email" required>
-                                            <div class="valid-tooltip">
-                                                This email is valid
-                                            </div>
-                                            <div class="invalid-tooltip">
-                                                Please enter a valid email
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="input-group">
-                                            <input type="password" class="form-control showhide-pass" id="account-pass"
-                                                placeholder="Password" required>
 
-                                            <button type="button" id="btnToggle" class="toggle"><i id="eyeIcon"
-                                                    class="fa fa-eye"></i></button>
-                                            <div class="valid-tooltip">
-                                                Looks good!
-                                            </div>
-                                            <div class="invalid-tooltip">
-                                                Enter a strong password
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+	<!-- ============ shop Section start Here========== -->
+	<section class="checkout padding-top padding-bottom">
+	    <div class="container">
+	        <div class="checkout__wrapper">
+	            <form action="#" class="checkout__form">
+	                <div class="row g-5">
+	                    <div class="col-md-6">
+	                        <div class="billing__details mb-5">
+	                            <div class="checkout__title">
+	                                <h5>Billing Details</h5>
+	                            </div>
+	                            <div class="billing__form">
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="fname" placeholder="First Name">
+	                                    <label for="fname">First Name</label>
+	                                </div>
 
-                                <div class="account__form-passcheck">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="" id="terms-check">
-                                        <label for="terms-check" class="form-check-label">
-                                            Remember for 30 days
-                                        </label>
-                                    </div>
-                                    <div class="account__form-forgotpass">
-                                        <a href="forgot-pass.html">Forgot Password?</a>
-                                    </div>
-                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="lname" placeholder="Last Name">
+	                                    <label for="lname">Last Name</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="companyName"
+	                                        placeholder="Company Name">
+	                                    <label for="companyName">Company Name</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="addressInput" placeholder="Address">
+	                                    <label for="addressInput">Address</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="addressInput2"
+	                                        placeholder="Address Line 2">
+	                                    <label for="addressInput2">Address Line 2</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="city" placeholder="City/Town">
+	                                    <label for="city">City/Town</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="postalCode"
+	                                        placeholder="Postal code / ZIP">
+	                                    <label for="postalCode">Postal code / ZIP</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="text" class="form-control" id="phone" placeholder="Phone">
+	                                    <label for="phone">Phone</label>
+	                                </div>
+	                                <div class="form-floating mb-3">
+	                                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+	                                    <label for="email">Email Address</label>
+	                                </div>
+	                                <div class="form-check">
+	                                    <input class="form-check-input" type="checkbox" value="" id="accountCheck">
+	                                    <label class="form-check-label" for="accountCheck">
+	                                        Create an account?
+	                                    </label>
+	                                </div>
+	                                <div class="form-check">
+	                                    <input class="form-check-input" type="checkbox" value="" id="shippingCheck">
+	                                    <label class="form-check-label" for="shippingCheck">
+	                                        Ship to a different address?
+	                                    </label>
+	                                </div>
 
-                                <button type="submit"
-                                    class="trk-btn trk-btn--border trk-btn--secondary1 d-block mt-4">Sign in</button>
-                            </form>
-                            <!-- account social -->
-                            <div class="account__social">
-                                <a href="#" class="account__social-btn"><span><img src="assets/images/others/google.svg"
-                                            alt="google icon"></span>
-                                    Sign in with google
-                                </a>
-                            </div>
+	                            </div>
+	                        </div>
+	                        <div class="additional-info">
+	                            <div class="checkout__title">
+	                                <h5>Additional Information</h5>
+	                            </div>
+	                            <div class="form-floating">
+	                                <textarea class="form-control" placeholder="Order Note" id="orderNote"></textarea>
+	                                <label for="orderNote">Comments</label>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-6">
+	                        <div class="order">
+	                            <div class="checkout__title">
+	                                <h5>Your Orders</h5>
+	                            </div>
+	                            <div class="order__details table-responsive mb-5">
+	                                <table class="table">
+	                                    <thead>
+	                                        <tr>
+	                                            <th scope="col">Product</th>
+	                                            <th scope="col">Total</th>
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody class="table-group-divider">
+	                                        <tr>
+	                                            <td colspan="2">
+	                                                <table class="table table-borderless">
+	                                                    <tbody>
+	                                                        <tr>
+	                                                            <td>Fresh Organic Tomato</td>
+	                                                            <td>$90.00</td>
+	                                                        </tr>
+	                                                        <tr>
+	                                                            <td>Fresh Organic Juice</td>
+	                                                            <td>$93.90</td>
+	                                                        </tr>
+	                                                        <tr>
+	                                                            <td>Fresh Sea Fish</td>
+	                                                            <td>$55.50</td>
+	                                                        </tr>
+	                                                    </tbody>
+	                                                </table>
+	                                            </td>
+	                                        </tr>
+	                                        <tr>
+	                                            <th scope="row">Sub Total</th>
+	                                            <td>$293.90</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <th scope="row">Shipping</th>
+	                                            <td>Free Shipping</td>
+	                                        </tr>
 
-                            <div class="account__switch">
-                                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-                            </div>
-                        </div>
+	                                    </tbody>
+	                                    <tfoot>
+	                                        <tr>
+	                                            <th>Total</th>
+	                                            <th>$293.90</th>
+	                                        </tr>
+	                                    </tfoot>
+	                                </table>
+	                            </div>
+	                            <div class="payment__option">
+	                                <div class="checkout__title">
+	                                    <h5>Payment</h5>
+	                                </div>
+	                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, perspiciatis!
+	                                </p>
+	                                <div class="form-check">
+	                                    <input class="form-check-input" type="checkbox" value="" id="paymentCheck">
+	                                    <label class="form-check-label" for="paymentCheck">
+	                                        Check payment
+	                                    </label>
+	                                </div>
+	                                <div class="form-check">
+	                                    <input class="form-check-input" type="checkbox" value="" id="paypalCheck">
+	                                    <label class="form-check-label" for="paypalCheck">
+	                                        Paypal
+	                                    </label>
+	                                </div>
+	                            </div>
+	                            <div class="mt-5">
+	                                <a href="#" class="default-btn d-block text-center"><span>Place Order</span></a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	</section>
+	<!-- ============ shop Section Ends Here========== -->
+
+
+
+
+
+
+
+    <!-- ===============>> newsletter start here <<================= -->
+    <div class="newsletter" data-aos="fade-up" data-aos-duration="800">
+        <div class="container">
+            <div class="newsletter__wrapper">
+                <div class="newsletter__content">
+                    <div class="newsletter__content-inner newsletter__content-inner--style1 text-center"
+                        style="background-image:url(assets/images/footer/2.png)">
+                        <h2>Get free Pro memberships for
+                            your high school class</h2>
+
+                        <a href="signin.html" class="trk-btn trk-btn--rounded trk-btn--primary1">Join With Us</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ===============>> account end here <<================= -->
-
-
-
-
-
-
-
+    </div>
+    <!-- ===============>> newsletter end here <<================= -->
 
 
     <!-- ===============>> footer start here <<================= -->
     <footer class="footer brand-1" style="background-image:url(assets/images/footer/1.png)">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer__top padding-top padding-bottom ">
+                <div class="footer__top footer__top--style1 padding-bottom ">
                     <div class="row g-5">
                         <div class="col-xl-4 col-md-6">
                             <div class="footer__about">
@@ -369,7 +471,7 @@
 
 
     <!-- scrollToTop start here -->
-    <!-- <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up-from-bracket"></i></a> -->
+    <a href="#" class="scrollToTop scrollToTop--home1"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
     <!-- scrollToTop ending here -->
 
 

@@ -107,8 +107,6 @@
                                 @include add-prefix(transform, scale(1.05));
                             }
 
-
-
                         }
 
                         &-author {
@@ -122,27 +120,8 @@
 
                 }
 
-
-
             }
 
-            // &__wrapper {
-            //     .section-header {
-
-            //         // margin-block-end: 0;
-            //         p {
-            //             @include font-size(16px);
-            //         }
-
-            //         @include breakpoint(max-md) {
-            //             margin-block-end: 20px;
-            //         }
-
-            //         @include breakpoint(max-xl) {
-            //             margin-block-end: 20px;
-            //         }
-            //     }
-            // }
             &__header {
                 @extend %pe-20;
 
@@ -252,9 +231,10 @@
             }
 
             &__content {
-                h4{
+                h4 {
                     @extend %text-semibold;
                 }
+
                 .designation {
                     @extend %mb-10;
                     color: $text-color-light;

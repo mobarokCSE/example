@@ -110,15 +110,17 @@
 
 
 
+
+
     <!-- ==========Page Header Section Starts Here========== -->
-    <div class="pageheader" style="background-image:url(assets/images/bg/home1/9.png)">
+    <div class="pageheader" style="background-image:url(assets/images/bg/home1/2.png)">
         <div class="container">
             <div class="pageheader__content">
-                <h2>Login</h2>
+                <h2>Course</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Login</li>
+                        <li class="breadcrumb-item active" aria-current="page">Course</li>
                     </ol>
                 </nav>
             </div>
@@ -128,97 +130,244 @@
 
 
 
-    <!-- ===============>> account start here <<================= -->
-    <section class="account padding-top padding-bottom">
-        <div class="container-fluid">
-            <div class="account__wrapper" data-aos="fade-up" data-aos-duration="800">
-                <div class="row g-4">
-                    <div class="col-lg-12">
-                        <div class="account__content">
-                            <!-- account tittle -->
-                            <div class="account__header">
-                                <h3>Log in to your account</h3>
-                                <p>Welcome back! Please enter your details.</p>
-                            </div>
-                            <!-- account form -->
-                            <form action="#" class="account__form needs-validation" novalidate>
-                                <div class="row g-4">
-                                    <div class="col-lg-12">
-                                        <div class="input-group">
-                                            <input type="email" class="form-control" id="account-email"
-                                                placeholder="Enter your email" required>
-                                            <div class="valid-tooltip">
-                                                This email is valid
-                                            </div>
-                                            <div class="invalid-tooltip">
-                                                Please enter a valid email
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="input-group">
-                                            <input type="password" class="form-control showhide-pass" id="account-pass"
-                                                placeholder="Password" required>
 
-                                            <button type="button" id="btnToggle" class="toggle"><i id="eyeIcon"
-                                                    class="fa fa-eye"></i></button>
-                                            <div class="valid-tooltip">
-                                                Looks good!
-                                            </div>
-                                            <div class="invalid-tooltip">
-                                                Enter a strong password
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    <!-- ==========Cart Section start Here========== -->
+	<div class="shop-cart padding-top padding-bottom">
+	    <div class="container">
+	        <div class="section-wrapper">
+	            <div class="cart-top">
+	                <table>
+	                    <thead>
+	                        <tr>
+	                            <th>Product</th>
+	                            <th>Price</th>
+	                            <th>Quantity</th>
+	                            <th>Total</th>
+	                            <th>Edit</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr>
+	                            <td class="product-item">
+	                                <div class="p-thumb rounded">
+	                                    <a href="#"><img src="assets/images/product/01.png" alt="product"></a>
+	                                </div>
+	                                <div class="p-content">
+	                                    <a href="#">Product Text Here</a>
+	                                </div>
+	                            </td>
+	                            <td>$250</td>
+	                            <td>
+	                                <div class="cart-plus-minus">
+	                                    <div class="dec qtybutton">-</div>
+	                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="3">
+	                                    <div class="inc qtybutton">+</div>
+	                                </div>
+	                            </td>
+	                            <td>$750</td>
+	                            <td>
+	                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="product-item">
+	                                <div class="p-thumb rounded">
+	                                    <a href="#"><img src="assets/images/product/02.png" alt="product"></a>
+	                                </div>
+	                                <div class="p-content">
+	                                    <a href="#">Product Text Here</a>
+	                                </div>
+	                            </td>
+	                            <td>$250</td>
+	                            <td>
+	                                <div class="cart-plus-minus">
+	                                    <div class="dec qtybutton">-</div>
+	                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+	                                    <div class="inc qtybutton">+</div>
+	                                </div>
+	                            </td>
+	                            <td>$500</td>
+	                            <td>
+	                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="product-item">
+	                                <div class="p-thumb rounded">
+	                                    <a href="#"><img src="assets/images/product/03.png" alt="product"></a>
+	                                </div>
+	                                <div class="p-content">
+	                                    <a href="#">Product Text Here</a>
+	                                </div>
+	                            </td>
+	                            <td>$50</td>
+	                            <td>
+	                                <div class="cart-plus-minus">
+	                                    <div class="dec qtybutton">-</div>
+	                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+	                                    <div class="inc qtybutton">+</div>
+	                                </div>
+	                            </td>
+	                            <td>$100</td>
+	                            <td>
+	                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="product-item">
+	                                <div class="p-thumb rounded">
+	                                    <a href="#"><img src="assets/images/product/04.png" alt="product"></a>
+	                                </div>
+	                                <div class="p-content">
+	                                    <a href="#">Product Text Here</a>
+	                                </div>
+	                            </td>
+	                            <td>$100</td>
+	                            <td>
+	                                <div class="cart-plus-minus">
+	                                    <div class="dec qtybutton">-</div>
+	                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+	                                    <div class="inc qtybutton">+</div>
+	                                </div>
+	                            </td>
+	                            <td>$200</td>
+	                            <td>
+	                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <td class="product-item">
+	                                <div class="p-thumb rounded">
+	                                    <a href="#"><img src="assets/images/product/05.png" alt="product"></a>
+	                                </div>
+	                                <div class="p-content">
+	                                    <a href="#">Product Text Here</a>
+	                                </div>
+	                            </td>
+	                            <td>$200</td>
+	                            <td>
+	                                <div class="cart-plus-minus">
+	                                    <div class="dec qtybutton">-</div>
+	                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+	                                    <div class="inc qtybutton">+</div>
+	                                </div>
+	                            </td>
+	                            <td>$400</td>
+	                            <td>
+	                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+	                            </td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	            </div>
+	            <div class="cart-bottom">
+	                <div class="cart-checkout-box">
+	                    <form action="/" class="coupon">
+	                        <input type="text" name="coupon" placeholder="Coupon Code..." class="cart-page-input-text">
+	                        <input type="submit" value="Apply Coupon">
+	                    </form>
+	                    <form action="/" class="cart-checkout">
+	                        <input type="submit" value="Update Cart">
+	                        <input type="submit" value="Proceed to Checkout">
+	                    </form>
+	                </div>
+	                <div class="shiping-box">
+	                    <div class="row">
+	                        <div class="col-md-6 col-12">
+	                            <div class="calculate-shiping w-100">
+	                                <h4>Calculate Shipping</h4>
+	                                <div class="row g-4">
+	                                    <div class="col-md-6">
+	                                        <div class="outline-select">
+	                                            <select>
+	                                                <option value="volvo">United Kingdom (UK)</option>
+	                                                <option value="saab">Bangladesh</option>
+	                                                <option value="saab">Pakisthan</option>
+	                                                <option value="saab">India</option>
+	                                                <option value="saab">Nepal</option>
+	                                            </select>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-md-6">
+	                                        <div class="outline-select shipping-select">
+	                                            <select>
+	                                                <option value="volvo">State/Country</option>
+	                                                <option value="saab">Dhaka</option>
+	                                                <option value="saab">Benkok</option>
+	                                                <option value="saab">Kolkata</option>
+	                                                <option value="saab">Kapasia</option>
+	                                            </select>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-md-6">
+	                                        <input type="text" name="coupon" placeholder="Postcode/ZIP"
+	                                            class="cart-page-input-text" />
+	                                    </div>
+	                                    <div class="col-md-6">
+	                                        <button type="submit" class="default-btn default-btn--sm"><span>Update
+	                                                Total</span></button>
+	                                    </div>
+	                                </div>
 
-                                <div class="account__form-passcheck">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" value="" id="terms-check">
-                                        <label for="terms-check" class="form-check-label">
-                                            Remember for 30 days
-                                        </label>
-                                    </div>
-                                    <div class="account__form-forgotpass">
-                                        <a href="forgot-pass.html">Forgot Password?</a>
-                                    </div>
-                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-6 col-12">
+	                            <div class="cart-overview">
+	                                <h4>Cart Totals</h4>
+	                                <ul>
+	                                    <li>
+	                                        <span class="pull-left">Cart Subtotal</span>
+	                                        <p class="pull-right">$ 0.00</p>
+	                                    </li>
+	                                    <li>
+	                                        <span class="pull-left">Shipping and Handling</span>
+	                                        <p class="pull-right">Free Shipping</p>
+	                                    </li>
+	                                    <li>
+	                                        <span class="pull-left">Order Total</span>
+	                                        <p class="pull-right">$ 2940.00</p>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+    <!-- ==========Cart Section Ends Here========== -->
 
-                                <button type="submit"
-                                    class="trk-btn trk-btn--border trk-btn--secondary1 d-block mt-4">Sign in</button>
-                            </form>
-                            <!-- account social -->
-                            <div class="account__social">
-                                <a href="#" class="account__social-btn"><span><img src="assets/images/others/google.svg"
-                                            alt="google icon"></span>
-                                    Sign in with google
-                                </a>
-                            </div>
 
-                            <div class="account__switch">
-                                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-                            </div>
-                        </div>
+
+
+
+
+
+    <!-- ===============>> newsletter start here <<================= -->
+    <div class="newsletter" data-aos="fade-up" data-aos-duration="800">
+        <div class="container">
+            <div class="newsletter__wrapper">
+                <div class="newsletter__content">
+                    <div class="newsletter__content-inner newsletter__content-inner--style1 text-center"
+                        style="background-image:url(assets/images/footer/2.png)">
+                        <h2>Get free Pro memberships for
+                            your high school class</h2>
+
+                        <a href="signin.html" class="trk-btn trk-btn--rounded trk-btn--primary1">Join With Us</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ===============>> account end here <<================= -->
-
-
-
-
-
-
-
+    </div>
+    <!-- ===============>> newsletter end here <<================= -->
 
 
     <!-- ===============>> footer start here <<================= -->
     <footer class="footer brand-1" style="background-image:url(assets/images/footer/1.png)">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer__top padding-top padding-bottom ">
+                <div class="footer__top footer__top--style1 padding-bottom ">
                     <div class="row g-5">
                         <div class="col-xl-4 col-md-6">
                             <div class="footer__about">
@@ -369,7 +518,7 @@
 
 
     <!-- scrollToTop start here -->
-    <!-- <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up-from-bracket"></i></a> -->
+    <a href="#" class="scrollToTop scrollToTop--home1"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
     <!-- scrollToTop ending here -->
 
 

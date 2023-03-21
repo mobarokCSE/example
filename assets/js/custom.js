@@ -15,6 +15,24 @@ AOS.init();
 //     }, 5000);
 // });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        var container = document.getElementById("container");
+        container.classList.add("loaded");
+        // Once the container has finished, the scroll appears
+        if (container.classList.contains("loaded")) {
+            // It is so that once the container is gone, the entire preloader section is deleted
+            setTimeout(function () {
+                var preloader = document.getElementById("preloader");
+                preloader.parentNode.removeChild(preloader);
+            }, 1000);
+        }
+    }, 1000);
+});
+
+
 // =================== preloader js end ================== //
 
 
@@ -247,11 +265,11 @@ const studentreview = new Swiper('.studentreview__slider', {
             spaceBetween: 25,
         },
     },
-    // autoplay: {
-    //     delay: 1,
-    //     disableOnInteraction: true,
-    // },
-    speed: 3000,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: true,
+    },
+    speed: 5000,
 });
 
 
@@ -432,7 +450,7 @@ var testimonialStoryteller = new Swiper(".testimonial__author3", {
 
 // testimonial
 const testimonialSlider3 = new Swiper('.testimonial__slider3', {
-    spaceBetween: 24,
+    spaceBetween: 40,
     grabCursor: true,
     loop: true,
     slidesPerView: 1,
@@ -551,3 +569,40 @@ document.querySelector('.scrollToTop').addEventListener('click', function (e) {
 // =================== count start here =================== //
 new PureCounter();
 // =================== count end here =================== //
+
+
+
+// const searchToggle = document.querySelector('.search-toggle');
+// const searchIcon = document.querySelector('.search-icon');
+// const searchBar = document.querySelector('.search-bar');
+// const closeIcon = document.querySelector('.close-icon');
+
+// searchIcon.addEventListener('click', function () {
+//     searchBar.classList.add('open');
+// });
+
+// closeIcon.addEventListener('click', function () {
+//     searchBar.classList.remove('open');
+// });
+
+
+        //======== Shop cart quantity ============
+        // shop cart + - start here
+        // var CartPlusMinus = $('.cart-plus-minus');
+        // CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
+        // CartPlusMinus.append('<div class="inc qtybutton">+</div>');
+        // $(".qtybutton").on("click", function () {
+        //     var $button = $(this);
+        //     var oldValue = $button.parent().find("input").val();
+        //     if ($button.text() === "+") {
+        //         var newVal = parseFloat(oldValue) + 1;
+        //     } else {
+        //         // Don't allow decrementing below zero
+        //         if (oldValue > 0) {
+        //             var newVal = parseFloat(oldValue) - 1;
+        //         } else {
+        //             newVal = 1;
+        //         }
+        //     }
+        //     $button.parent().find("input").val(newVal);
+        // });

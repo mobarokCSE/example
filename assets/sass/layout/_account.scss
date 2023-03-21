@@ -19,6 +19,7 @@
             @include font-size(18px);
             font-weight: 400;
             @extend %mb-60;
+            color: $text-color;
         }
     }
 
@@ -28,7 +29,7 @@
             // @include font-size(16px);
             font-weight: 500;
             color: $text-color;
-        } 
+        }
 
         .input-group {
             @include add-prefix(transition, $transition);
@@ -52,7 +53,7 @@
             }
 
             .valid-tooltip {
-                color: $success; 
+                color: $success;
             }
 
             .invalid-tooltip {
@@ -91,15 +92,25 @@
             %mb-35,
             %mt-35;
             gap: 10px;
-            
 
-            a{
-                color: $text-color;
+            .form-check-input {
+                width: 1.2em;
+                height: 1.2em;
+                margin-inline-end: 3px;
             }
+
+            .form-check-label {
+                @extend %text-regular;
+                @include font-size(18px);
+                color: $text-color-light;
+            }
+
 
         }
 
-
+        button.trk-btn {
+            @include font-size(18px);
+        }
 
         .default-btn {
             @extend %w-100;
@@ -107,8 +118,9 @@
 
         &-forgotpass {
             a {
-                color: $text-color;
-                font-weight: 600;
+                @extend %text-medium;
+                @include font-size(18px);
+                color: $form-focus;
             }
         }
 
@@ -122,12 +134,15 @@
             @include add-prefix(transition, $transition);
             @extend %w-100,
             %justify-center;
+            @extend %text-regular;
+            @include font-size(18px);
             display: inline-flex;
             background-color: $white-color;
             padding: .7rem 2.25rem;
             border: 1px solid rgba($text-color, $alpha:.3);
             border-radius: .5rem;
-            font-weight: 600;
+
+
 
             @include breakpoint(xl) {
                 padding: 0.8rem 2.25rem;
@@ -135,7 +150,7 @@
 
             span {
                 @extend %me-10,
-                %d-inline-block ; 
+                %d-inline-block;
             }
 
             &:hover {
@@ -150,14 +165,15 @@
         %mt-30;
 
         p {
-            @extend %mb-0;
+            @extend %mb-0, %text-regular;
+            @include font-size(18px);
         }
 
         a {
             @extend %ms-5,
             %d-inline-block;
-            color: $text-color;
-            font-weight: 600;
+            @include font-size(18px);
+            color: $form-focus;
         }
     }
 }

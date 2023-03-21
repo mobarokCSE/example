@@ -426,3 +426,125 @@
         }
     }
 }
+
+
+// search bar
+// .search-container {
+//   position: relative;
+
+//   .search-toggle {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     height: 100%;
+//     background-color: transparent;
+//     border: none;
+//     cursor: pointer;
+
+//     i {
+//       font-size: 1.5rem;
+//       color: #333;
+//     }
+//   }
+
+//   .search-form {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #fff;
+//     z-index: 9999;
+//     transform: translateY(-100%);
+//     transition: transform 0.3s ease-in-out;
+
+//     input[type="text"] {
+//       display: block;
+//       width: 100%;
+//       padding: 1rem;
+//       font-size: 1.2rem;
+//       border: none;
+//       border-bottom: 2px solid #333;
+//     }
+
+//     button[type="submit"] {
+//       display: block;
+//       width: 100%;
+//       padding: 1rem;
+//       font-size: 1.2rem;
+//       background-color:
+
+
+
+.search-toggle {
+  position: relative;
+  .search-icon {
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  .search-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      input[type="text"] {
+        width: 80%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        &:focus {
+          outline: none;
+        }
+      }
+      button[type="submit"] {
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover {
+          background: #444;
+        }
+      }
+    }
+    .close-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: #333;
+      cursor: pointer;
+      font-size: 1.5rem;
+      &:focus { 
+        outline: none;
+      }
+    }
+  }
+  &.active {
+    .search-icon {
+      display: none;
+    }
+    .search-bar {
+      display: flex;
+    }
+  }
+}
